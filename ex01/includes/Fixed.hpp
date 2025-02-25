@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: onkeltag <onkeltag@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 21:35:28 by onkeltag          #+#    #+#             */
-/*   Updated: 2025/02/09 14:56:49 by onkeltag         ###   ########.fr       */
+/*   Updated: 2025/02/25 12:13:08 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
 #include <cmath>
+#include "colors.hpp"
 
 class Fixed {
 	private:

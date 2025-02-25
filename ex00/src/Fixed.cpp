@@ -3,35 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: onkeltag <onkeltag@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 21:39:14 by onkeltag          #+#    #+#             */
-/*   Updated: 2025/02/09 14:50:01 by onkeltag         ###   ########.fr       */
+/*   Updated: 2025/02/25 12:12:16 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "../includes/Fixed.hpp"
 
 const int Fixed::_fractional_bits = 8;
 
 // Constructors
 Fixed::Fixed() : _value(0) {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout
+		<< YELLOW "Default constructor called" RESET
+		<< std::endl;
 }
 
 Fixed::Fixed(const Fixed& copy) {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout
+		<< CYAN "Copy constructor called" RESET
+		<< std::endl;
 	*this = copy;
 }
 
 // Destructor
 Fixed::~Fixed() {
-	std::cout << "Destructor called" << std::endl;
+	std::cout
+		<< RED "Destructor called" RESET
+		<< std::endl;
 }
 
 // Operators
 Fixed& Fixed::operator=(const Fixed& src) {
-	std::cout << "Assignation operator called" << std::endl;
+	std::cout
+		<< MAGENTA "Copy assignation operator called" RESET
+		<< std::endl;
 	if (this != &src)
 		this->_value = src.getRawBits();
 	return *this;
@@ -41,12 +49,16 @@ Fixed& Fixed::operator=(const Fixed& src) {
 
 // Getters
 int	Fixed::getRawBits(void) const {
-	std::cout << "getRawBits member function called" << std::endl;
+	std::cout
+	<< GREEN "getRawBits member function called" RESET
+	<< std::endl;
 	return this->_value;
 }
 
 // Setters
 void	Fixed::setRawBits(int const raw) {
-	std::cout << "setRawBits member function called" << std::endl;
+	std::cout
+		<< GREEN "setRawBits member function called" RESET
+		<< std::endl;
 	this->_value = raw;
 }

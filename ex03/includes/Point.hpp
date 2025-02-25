@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/08 21:35:28 by onkeltag          #+#    #+#             */
-/*   Updated: 2025/02/25 12:10:12 by jcheron          ###   ########.fr       */
+/*   Created: 2025/02/25 12:18:22 by jcheron           #+#    #+#             */
+/*   Updated: 2025/02/25 12:22:36 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <iostream>
+#include "Fixed.hpp"
 #include "colors.hpp"
 
-class Fixed {
+class Point {
 	private:
-		int					_value;
-		static const int	_fractional_bits;
+		Fixed const _x;
+		Fixed const _y;
 
 	public:
-		// Constructors
-		Fixed();
-		Fixed(const Fixed& copy);
+		Point();
+		Point(const float x, const float y);
+		Point(const Point &copy);
+		~Point();
 
-		// Destructor
-		~Fixed();
+		Point& operator=(const Point &src);
 
-		// Operators
-		Fixed& operator=(const Fixed& src);
-
-		// Methods
-
-		// Getters
-		int		getRawBits(void) const;
-
-		// Setters
-		void	setRawBits(int const raw);
+		const Fixed &getX(void) const;
+		const Fixed &getY(void) const;
 };
+
+std::ostream &operator<<(std::ostream &os, const Point &point);

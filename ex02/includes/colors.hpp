@@ -1,40 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   colors.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/08 21:35:28 by onkeltag          #+#    #+#             */
-/*   Updated: 2025/02/25 12:10:12 by jcheron          ###   ########.fr       */
+/*   Created: 2025/02/24 10:55:41 by jcheron           #+#    #+#             */
+/*   Updated: 2025/02/24 10:58:33 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include <iostream>
-#include "colors.hpp"
 
-class Fixed {
-	private:
-		int					_value;
-		static const int	_fractional_bits;
-
-	public:
-		// Constructors
-		Fixed();
-		Fixed(const Fixed& copy);
-
-		// Destructor
-		~Fixed();
-
-		// Operators
-		Fixed& operator=(const Fixed& src);
-
-		// Methods
-
-		// Getters
-		int		getRawBits(void) const;
-
-		// Setters
-		void	setRawBits(int const raw);
-};
+#define RED "\033[0;38;2;255;0;0m"
+#define GREEN "\033[0;38;2;0;255;0m"
+#define BLUE "\033[0;38;2;0;0;255m"
+#define YELLOW "\033[0;38;2;255;255;0m"
+#define MAGENTA "\033[0;38;2;255;0;255m"
+#define CYAN "\033[0;38;2;0;255;255m"
+#define WHITE "\033[0;38;2;255;255;255m"
+#define RESET "\033[0m"
