@@ -6,7 +6,7 @@
 /*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 21:39:14 by onkeltag          #+#    #+#             */
-/*   Updated: 2025/02/25 12:15:15 by jcheron          ###   ########.fr       */
+/*   Updated: 2025/02/26 08:12:54 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,15 @@ Fixed& Fixed::operator=(const Fixed& src) {
 }
 
 // Methods
+// Converts the fixed point number to a float
+// Formula : value / 2^fractional_bits
 float Fixed::toFloat(void) const {
 	return (float)this->_value / (1 << Fixed::_fractional_bits);
 }
 
+// Converts the fixed point number truncating the fractional part
+// Formula : value >> fractional_bits
+// (equivalent to value / 2^fractional_bits but without the float)
 int Fixed::toInt(void) const {
 	return this->_value >> Fixed::_fractional_bits;
 }

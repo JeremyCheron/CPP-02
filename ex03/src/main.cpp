@@ -6,7 +6,7 @@
 /*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 21:41:51 by onkeltag          #+#    #+#             */
-/*   Updated: 2025/02/25 12:35:24 by jcheron          ###   ########.fr       */
+/*   Updated: 2025/02/26 09:05:49 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,18 @@ int main(void) {
 	}
 	{
 		Point a(0, 0);
-		Point b(10, 0);
+		Point b(10.5, 0);
 		Point c(0, 10);
-		Point point(12, 1);
+		Point point(7.2, 1);
 
 		std::cout << "a: " << a << std::endl;
 		std::cout << "b: " << b << std::endl;
 		std::cout << "c: " << c << std::endl;
 		if (bsp(a, b, c, point))
 			std::cout
-				<< GREEN "Point is in the triangle" RESET
+				<< GREEN
+				<< point
+				<< "Point is in the triangle" RESET
 				<< std::endl;
 		else
 			std::cout

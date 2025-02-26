@@ -6,12 +6,13 @@
 /*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 12:25:59 by jcheron           #+#    #+#             */
-/*   Updated: 2025/02/25 12:29:11 by jcheron          ###   ########.fr       */
+/*   Updated: 2025/02/26 08:19:51 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Point.hpp"
 
+// Area of a triangle
 static float area(const Point p1, const Point p2, const Point p3)
 {
 	float area;
@@ -27,6 +28,7 @@ static float area(const Point p1, const Point p2, const Point p3)
 	return area;
 }
 
+// Check if a point is inside a triangle
 bool bsp(const Point a, const Point b, const Point c, const Point point)
 {
 	float d0, d1, d2, d3;

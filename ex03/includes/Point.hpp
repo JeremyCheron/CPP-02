@@ -6,13 +6,22 @@
 /*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 12:18:22 by jcheron           #+#    #+#             */
-/*   Updated: 2025/02/25 12:22:36 by jcheron          ###   ########.fr       */
+/*   Updated: 2025/02/26 08:19:26 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include "colors.hpp"
 
+/**
+ * @brief Class that represents a point in a 2D space
+ *
+ * The class Point represents a point in a 2D space.
+ * The class has a constructor that initializes
+ * the x and y coordinates to 0, a constructor
+ * that initializes the x and y coordinates to
+ * the given values, a copy constructor and a destructor.
+ */
 class Point {
 	private:
 		Fixed const _x;

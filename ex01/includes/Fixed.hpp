@@ -6,7 +6,7 @@
 /*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 21:35:28 by onkeltag          #+#    #+#             */
-/*   Updated: 2025/02/25 12:13:08 by jcheron          ###   ########.fr       */
+/*   Updated: 2025/02/26 08:04:01 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ class Fixed {
 		// Constructors
 		Fixed();
 		Fixed(const Fixed& copy);
+		// The int constructor shifts the value to the left by the number of fractional bits
+		// to store the fractional part
 		Fixed(const int value);
+		// The float constructor rounds the value to the nearest integer and shifts it to the left
 		Fixed(const float value);
 
 		// Destructor
@@ -34,7 +37,9 @@ class Fixed {
 		Fixed& operator=(const Fixed& src);
 
 		// Methods
+		// Converts the fixed point number to a float
 		float	toFloat(void) const;
+		// Converts the fixed point number to an int
 		int		toInt(void) const;
 
 		// Getters
@@ -44,4 +49,5 @@ class Fixed {
 		void	setRawBits(int const raw);
 };
 
+// Overload of the << operator to print the raw value of the fixed point number
 std::ostream& operator<<(std::ostream& out, const Fixed& src);
